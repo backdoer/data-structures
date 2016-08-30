@@ -10,9 +10,13 @@ The general class workflow will go as follows:
 
 1. Clone this repo to your computer (`git clone...`)
 2. Create a branch titled `algorithm_name` (or `data_structure_name`) **off of master**
-3. Write your assignment in a file in the project root by adding a `*.py` or `*.java`... 
+3. Write your assignment in a file in the `assignments` directory by adding a `*.py` or `*.java`... 
 4. Add, commit, and push your branch up to the repo
 5. DM John in Slack to let him know that you've finished, and he'll go in and review your work. When it's been graded, he'll merge it into `master`. 
+
+You'll also notice that Dr. Albrecht will be storing relevant class materials in the `class_materials` directory. 
+
+**To clarify**: You'll be storing only the assignments (see Dr. Albrecht's example in the `assignments` directory) in the source for this repo. All other information should be stored in Wiki pages in the built-in BitBucket Wiki. 
 
 ## Adding to the Wiki
 
