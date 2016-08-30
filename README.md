@@ -9,7 +9,7 @@ This repo is a private repository, meaning that you have to be explicitly added 
 The general class workflow will go as follows: 
 
 1. Clone this repo to your computer (`git clone...`)
-2. Create a branch titled `lastname_firstname` **off of master**
+2. Create a branch titled `algorithm_name` (or `data_structure_name`) **off of master**
 3. Write your assignment in a file in the project root by adding a `*.py` or `*.java`... 
 4. Add, commit, and push your branch up to the repo
 5. DM John in Slack to let him know that you've finished, and he'll go in and review your work. When it's been graded, he'll merge it into `master`. 
@@ -26,4 +26,4 @@ Git tracks changes to the Markdown files and keeps records of the different comm
 
 If you have any questions about using any of the class tools or repos or anything, feel free to DM John (`@johnt`) in the IS Slack team. 
 
-Doing class this way is meant to be a little different, and quite open. So, please don't abuse us using BitBucket for assignments. If everything works out the way that it should, at the end of the class, we'll have a nice project folder full of different algorithm assignments, keys, and a nice, beefy Wiki you can reference later. 
+Doing class this way is meant to be a little different, and quite open. So, please don't abuse us using BitBucket for assignments. If everything works out the way that it should, at the end of the class, we'll have a nice project folder full of different algorithm assignments, keys, and a nice, beefy Wiki you can reference later.
