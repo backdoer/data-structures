@@ -47,20 +47,20 @@ For any other questions, reach out the John Turner (`@johnt` in IS Slack team).
 
 ## Data Structures
 
-- [I'm an example broken link - click me to make the new page](Example Data Structure)
+- [I'm an example broken link - click me to make the new page](Example_Data_Structure.md)
 
 ## Algorithms
 
-- [I'm a broken link](Example Algorithm.md)
+- [I'm a broken link](Example_Algorithm.md)
 
 ## Language Choices
 
 Create a document for your language choices, and add it to this list (this is referencing the "Choose your Language" assignment in Learning Suite): 
 
-- [Python](Python Choose Language Assignment.md)
+- [Python](Python_Choose_Language_Assignment.md)
 - [Python](Everything_Python.md)
-- [Swift](Swift Choose Language Assignment.md)
+- [Swift](Swift_Choose_Language_Assignment.md)
 
 ## Miscellaneous
 
-- [I'm a broken link](Example Miscellaneous Article)
+- [I'm a broken link](Example_Miscellaneous_Article.md)
