@@ -51,14 +51,15 @@ For any other questions, reach out the John Turner (`@johnt` in IS Slack team).
 
 ## Algorithms
 
-- [I'm a broken link](Example Algorithm)
+- [I'm a broken link](Example Algorithm.md)
 
 ## Language Choices
 
 Create a document for your language choices, and add it to this list (this is referencing the "Choose your Language" assignment in Learning Suite): 
 
-- [Python](Python Choose Language Assignment)
-- [Swift](Swift Choose Language Assignment)
+- [Python](Python Choose Language Assignment.md)
+- [Python](Everything Python.md)
+- [Swift](Swift Choose Language Assignment.md)
 
 ## Miscellaneous
 
