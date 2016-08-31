@@ -20,7 +20,10 @@ You'll also notice that Dr. Albrecht will be storing relevant class materials in
 
 ## Adding to the Wiki
 
-You'll notice a Wiki on the left navigation menu. BitBucket's wiki is just a series of Markdown files. Feel free to add in a Wiki article, and link to it by editing the Wiki's main page **where it's indicated to edit it**. You can do all of this with the in-browser tools. 
+You'll notice a Wiki on the left navigation menu, **BUT WE'RE NOT USING IT**. We are instead going to create our wiki in the source folder.  This will allow us to grade and navigate your branches on the web site easier.
+
+In other words, you add to the wiki by checking out files, editing them, committing, pushing them back up, and submitting a pull request.
+
 
 ### Note
 
