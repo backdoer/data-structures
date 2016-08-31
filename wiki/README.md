@@ -58,7 +58,7 @@ For any other questions, reach out the John Turner (`@johnt` in IS Slack team).
 Create a document for your language choices, and add it to this list (this is referencing the "Choose your Language" assignment in Learning Suite): 
 
 - [Python](Python Choose Language Assignment.md)
-- [Python](Everything Python.md)
+- [Python](Everything_Python.md)
 - [Swift](Swift Choose Language Assignment.md)
 
 ## Miscellaneous
