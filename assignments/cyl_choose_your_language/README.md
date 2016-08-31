@@ -7,6 +7,13 @@ Choose an appropriate language to use in this class.  Along with others who choo
 
 While others in the class will also contribute to your wiki page, you need to author at least one coding example linked to the language page.  Ensure the example is clear and concise, but ensure it is complex enough to illustrate something about the inner workings of your language.  Walk the reader through the development of your program, and show output data.
 
+## Authors
+
+This assignment was created by:
+
+* Conan Albrecht (`@doconix` on Slack).
+
+
 ## Getting Started
 
 The following steps will help you get started:
