@@ -34,9 +34,11 @@ To use this Wiki for the class's purposes, follow this general workflow:
 1. Checkout the code normally.  The wiki is in the `wiki/` directory.
 1. Checkout a new branch with your name in it.  See the [cyl_choose_your_language assignment](https://bitbucket.org/jdt1204/byu_data_structures/src/master/assignments/cyl_choose_your_language/) for more information on how to create branches.
 1. Write your Wiki entry locally on your machine in a `.md` file.  Do not use spaces in the filename.  BitBucket doesn't seem to like it.
-2. Edit this document and add a link to either the Data Structures or Algorithms sections below (you can look below for syntax on how to do that). 
+1. Edit this document and add a link to either the Data Structures or Algorithms sections below (you can look below for syntax on how to do that). 
 
-For any other questions, reach out the John Turner (`@johnt` in IS Slack team). 
+After pushing your changes, be sure your browser url uses the **name of your branch** rather than the commit GUID.  If the GUID is in the URL, you'll only see the changes in that commit (which means you likely won't see your new changes).
+
+For any other questions, reach out to Dr. Albrecht (`@doconix` in IS Slack team) or John Turner (`@johnt` in IS Slack team). 
 
 ## Data Structures
 

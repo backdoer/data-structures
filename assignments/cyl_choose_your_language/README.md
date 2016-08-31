@@ -14,8 +14,7 @@ The following steps will help you get started:
 1. Go to [http://www.bitbucket.com/](BitBucket) and create an account.
 1. Ensure `git` works in your terminal (console/command prompt/shell/powershell).  If not, you need to [https://www.atlassian.com/git/tutorials/install-git](install git).  There are graphical front ends, but I highly recommend you learn the terminal commands this semester.
 1. Create a directory where you'll keep the files for this course.  We'll call it `byu537`.
-1. In terminal, change to the `byu537` directory. Clone the class git repository: `git clone git@bitbucket.org:jdt1204/byu_data_structures.git`.  You should now have a new directory called `byu_data_structures`.  This is where assignments will be posted.
-1. In terminal, change to the `byu538` directory. Clone the class git **wiki** repository: `git clone git@bitbucket.org:jdt1204/byu_data_structures.git/wiki`.  You should now have a new directory called `wiki`.  This is where you can edit the wiki pages.
+1. In terminal, change to the `byu537` directory. Clone the class git repository: `git clone git@bitbucket.org:jdt1204/byu_data_structures.git`.  You should now have a new directory called `byu_data_structures`.  This is where assignments will be posted and where our wiki source is kept.
 
 Next, learn how to write markdown by going [https://confluence.atlassian.com/bitbucketserver/markdown-syntax-guide-776639995.html](a documentation page).  It's pretty easy to pick up. 
 
