@@ -32,7 +32,7 @@ def foo(bar):
 To use this Wiki for the class's purposes, follow this general workflow: 
 
 1. Checkout the code normally.  The wiki is in the `wiki/` directory.
-1. Checkout a new branch with your name in it.  See the [cyl_choose_your_language assignment](/jdt1204/byu_data_structures/src/master/assignments/cyl_choose_your_language/) for more information on how to create branches.
+1. Checkout a new branch with your name in it.  See the [cyl_choose_your_language assignment](https://bitbucket.org/jdt1204/byu_data_structures/src/master/assignments/cyl_choose_your_language/) for more information on how to create branches.
 1. Write your Wiki entry locally on your machine in a `.md` file.  Do not use spaces in the filename.  BitBucket doesn't seem to like it.
 2. Edit this document and add a link to either the Data Structures or Algorithms sections below (you can look below for syntax on how to do that). 
 
