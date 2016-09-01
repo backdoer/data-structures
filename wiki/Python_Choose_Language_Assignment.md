@@ -93,17 +93,37 @@ if __name__ == "__main__":
 
 ## Bytecode Instructions
 
-- cpython is the default compiler for python. 
-- bytecode is created on the fly whenever a .pyc module is imported or when python is run
+- CPython is the default compiler for python. 
+- [bytecode](https://docs.python.org/2/glossary.html#term-bytecode) is created on the fly whenever a .pyc module is imported or when python is run
 
-Check out this list of available [python bytecode instructions](https://docs.python.org/2.4/lib/bytecodes.html) that the current Python compiler generates. (Also, here's a definition of [byte code](http://whatis.techtarget.com/definition/bytecode) if it helps.)
-
-The `dis` module can be used to dissemble python bytecode.
+The `dis` module can be used to dissemble python bytecode. Here's a quick example I made similar to the one shown on the [documentation](https://docs.python.org/2/library/dis.html). Let's say you have some function `myfunc()`:
 
 ```python
-    Something goes here
+def myfunc(some_list):
+    new_list = some_list
+    return len(some_list):
 ```
 
-Another useful link on [python bytecode](http://akaptur.com/blog/2013/08/14/python-bytecode-fun-with-dis/) in particular.
+Useless code? Yep, but it's just for the sake of the example. 
+Use `dis.dis` to disassemble your function:
 
-[Python documentation](https://docs.python.org/2/library/dis.html) on bytecode
+```python
+>>> import dis
+>>> dis.dis(myfunc)
+  2           0 LOAD_FAST                0 (some_list)
+              3 STORE_FAST               1 (new_list)
+
+  3           6 LOAD_GLOBAL              0 (len)
+              9 LOAD_FAST                1 (new_list)
+             12 CALL_FUNCTION            1 (1 positional, 0 keyword pair)
+             15 RETURN_VALUE
+```
+
+You can see the line of the function in the first column, the bytecode on the second column, and the variables, values, and names being called and stored on the stack on the right. We can see a variable `(some_list)` is loaded, a new variable `(new_list)` is stored to the stack, a global function (`len`) is loaded, and then a function is called and applied `new_list` variable. The value is then returned. Bada-boom, bada-bang. 
+
+`dis` can be used with modules, classes, methods, functions, or code objects. Different feedback will be given for different bytesource objects.
+
+
+- Check out this list of available [python bytecode instructions](https://docs.python.org/2.4/lib/bytecodes.html) that the current Python compiler generates. 
+- Also, here's a definition of [bytecode](http://whatis.techtarget.com/definition/bytecode) if you needed it like I did.)
+- Another helpful example on using [dis.dis](http://akaptur.com/blog/2013/08/14/python-bytecode-fun-with-dis/) in particular.
