@@ -89,3 +89,21 @@ if __name__ == "__main__":
     ret = main()
     sys.exit(ret)
 ```
+
+
+## Bytecode Instructions
+
+- cpython is the default compiler for python. 
+- bytecode is created on the fly whenever a .pyc module is imported or when python is run
+
+Check out this list of available [python bytecode instructions](https://docs.python.org/2.4/lib/bytecodes.html) that the current Python compiler generates. (Also, here's a definition of [byte code](http://whatis.techtarget.com/definition/bytecode) if it helps.)
+
+The `dis` module can be used to dissemble python bytecode.
+
+```python
+    Something goes here
+```
+
+Another useful link on [python bytecode](http://akaptur.com/blog/2013/08/14/python-bytecode-fun-with-dis/) in particular.
+
+[Python documentation](https://docs.python.org/2/library/dis.html) on bytecode
