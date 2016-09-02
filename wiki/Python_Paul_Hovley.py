@@ -1,13 +1,11 @@
-## Python Example
+## PYTHON EXAMPLES
 
 #Call Stack Example
-```python
 import traceback
 def first_method():
     try:
         second_method()
     except:
-        # WE WILL DO THINGS HERE
         traceback.print_exc()
 
 def second_method():
@@ -26,12 +24,10 @@ Traceback (most recent call last):
   File "./call_stack.py", line 28, in raise_exception_method
     raise Exception('Exceptional Exception')
 Exception: Exceptional Exception
-```
 
 Python behaves in a similar manner to most high-level languages in that it provides a trace for the methods in the order the were pushed onto the stack.  
 
 #Pointers/References
-```python
 def modify_dictionary(dictionary_ref):
     dictionary_copy = dictionary_ref #dictionary_copy is actually pointing at the memory location of dictionary_ref
     dictionary_copy["key"] = "modified"
@@ -52,5 +48,4 @@ Dictionary copy inside:
 {'key': 'modified'}
 Dictionary ref after: 
 {'key': 'modified'} 
-```
 
