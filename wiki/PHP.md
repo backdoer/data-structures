@@ -9,3 +9,4 @@ If you have anything you would like to add to this tutorial about PHP, feel free
 
 ## References ##
  - [PHP Documentation (English)](https://secure.php.net/manual/en/)
+ - [Passing Variables by Reference](http://php.net/manual/en/language.references.whatare.php)
