@@ -14,7 +14,7 @@
 
 - CPython is the most common implementation of Python. It is written in C. This is the source code of Python.
 - Began in 1989 by Van Rossom on a Christmas break while he was looking for a fun programming project to keep him busy. [Why was Python made?](https://docs.python.org/3/faq/general.html#why-was-python-created-in-the-first-place)
-- Named after Monty Python [Why is it called python?](https://docs.python.org/3/faq/general.html#why-is-it-called-python)
+- Named after Monty Python [Why is it called python?](https://docs.python.org/3/faq/general.html#why-is-it-called-python) 
 - It has a standard library but there have been numerous libraries created to extend functionality
 
 ## Basic Philosophy:
@@ -25,12 +25,12 @@
 - Complex is better than complicated
 - Readability counts
 
-## Drawbacks: 
-- It's a high level language, so you're sacrificing efficiency for convenience and readability.
-- Doing things closer to the hardware is difficult because it is high-level.  Any kernal or special threading issues will be very difficult to resolve. 
-- Misnamed variables won't be caught unless code is run
-- when working with nested functions, accessing variables in an outer scope is not possible in Python 2. There is a workaround in Python 3 via the [nonlocal statement](https://docs.python.org/3/reference/simple_stmts.html#the-nonlocal-statement), but that introduces a whole other pain point of backwards non-compatibility between Python 2 and 3. 
-- One could also say that python’s inability to distinguish between declaration and usage of a variable is an issue. What this means is that one could instantiate a variable and later accidentally write over that same variable with a redeclaration. To distinguish between the two, it could be nice to have two keywords: “let” to declare variables as read-only, and “var” variables as normal.
+## Drawbacks:  
+- It's a high level language, so you're sacrificing efficiency for convenience and readability. 
+- Doing things closer to the hardware is difficult because it is high-level.  Any kernal or special threading issues will be very difficult to resolve.   
+- Misnamed variables won't be caught unless code is run 
+- when working with nested functions, accessing variables in an outer scope is not possible in Python 2. There is a workaround in Python 3 via the [nonlocal statement](https://docs.python.org/3/reference/simple_stmts.html#the-nonlocal-statement), but that introduces a whole other pain point of backwards non-compatibility between Python 2 and 3.  
+- One could also say that python’s inability to distinguish between declaration and usage of a variable is an issue. What this means is that one could instantiate a variable and later accidentally write over that same variable with a redeclaration. To distinguish between the two, it could be nice to have two keywords: “let” to declare variables as read-only, and “var” variables as normal. 
 
 Consider this example:
 ```
@@ -56,15 +56,15 @@ y = 23    # Error: Variable `y` is read-only
 ## Memory Management:
 - According to python docs, heap management is performed by the interpreter itself.  The user has no control over it [Python Docs](https://docs.python.org/3/c-api/memory.html)
 
-## Garbage Collection:
-- Python does garbage collection for the user.
-- It uses reference counting meaning that it counts the number of times the object in question is referenced by the system.  When that count becomes zero, and the object is no longer referenced by anything in the system.  It is removed.
-- Garbage collection is triggered when the number of allocated memory spots minus the number of deallocated memory spots is greater than some threshold number (the default is 700)
-- If the system is running out of memory, an exception will fire, and no collection will be done.
-- A user can manually initiate a garbage collection cycle [Python Garbage Collection Wiki](http://www.digi.com/wiki/developer/index.php/Python_Garbage_Collection)
+## Garbage Collection: 
+- Python does garbage collection for the user. 
+- It uses reference counting meaning that it counts the number of times the object in question is referenced by the system.  When that count becomes zero, and the object is no longer referenced by anything in the system.  It is removed. 
+- Garbage collection is triggered when the number of allocated memory spots minus the number of deallocated memory spots is greater than some threshold number (the default is 700) 
+- If the system is running out of memory, an exception will fire, and no collection will be done. 
+- A user can manually initiate a garbage collection cycle [Python Garbage Collection Wiki](http://www.digi.com/wiki/developer/index.php/Python_Garbage_Collection) 
 ```python
-         import gc
-         gc.collect()
+         import gc 
+         gc.collect() 
 ```
 
 Two great approaches for deciding when to manually kick off garbage collection are time-based and event-based. They are exactly as they suggest they would be; time-based kicks off on pre-determined time interval, event-based listens for certain events throughout the script to kick off the garbage collection. A great example to see manual collection at work is:
