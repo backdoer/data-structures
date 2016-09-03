@@ -2,7 +2,7 @@
 ![Alt text](https://developer.apple.com/swift/images/swift-og.png)
 
 ##Code Examples
-- [Swift Basics](swift_basics.md)
+- [Swift Basics](../swift_basics.md)
 
 ##History
 Development began in July 2010 by Chris Lattner. The 2014 Apple Worldwide Developers Conference (WWDC) application was the first app written in Swift. At that WWDC a beta version of swift was released to registered Apple developers. Along with the language *The Swift Programming Language* was also released and is available on the iBooks store and the official website. It is very easy to access and read. It explains all the fundamentals of the language.
