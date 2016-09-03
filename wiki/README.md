@@ -4,11 +4,11 @@ Hey there this is cool.
 
 # Welcome to the Data Structures Wiki
 
-Here is where we'll be creating our own Data Structures / Algorithms knowledge base. Here's how to use it: 
+Here is where we'll be creating our own Data Structures / Algorithms knowledge base. Here's how to use it:
 
 ## Wiki How-To
 
-This wiki uses the [Markdown](http://daringfireball.net/projects/markdown/) syntax. So, you'll create files using the in-browser editor and write text files in the Markdown syntax. If you're not familiar with Markdown, take some time and familiarize yourself with some of the basics, like Headers, links, and lists. It's pretty easy to pick up. 
+This wiki uses the [Markdown](http://daringfireball.net/projects/markdown/) syntax. So, you'll create files using the in-browser editor and write text files in the Markdown syntax. If you're not familiar with Markdown, take some time and familiarize yourself with some of the basics, like Headers, links, and lists. It's pretty easy to pick up.
 
 You'll notice a Wiki on the left navigation menu, **BUT WE'RE NOT USING IT**. We are instead going to create our wiki in the source folder.  This will allow us to grade and navigate your branches on the web site easier.
 
@@ -17,7 +17,7 @@ In other words, you add to the wiki by checking out files, editing them, committ
 
 ## Syntax highlighting
 
-Since Markdown allows for easy syntax highlighting for pretty much any language that you'll be using, **PLEASE USE THIS FEATURE**! Here's an example of how to do just that: 
+Since Markdown allows for easy syntax highlighting for pretty much any language that you'll be using, **PLEASE USE THIS FEATURE**! Here's an example of how to do just that:
 
 ```python
 
@@ -31,16 +31,16 @@ def foo(bar):
 
 ## Using the Wiki for this Class
 
-To use this Wiki for the class's purposes, follow this general workflow: 
+To use this Wiki for the class's purposes, follow this general workflow:
 
 1. Checkout the code normally.  The wiki is in the `wiki/` directory.
 1. Checkout a new branch with your name in it.  See the [cyl_choose_your_language assignment](https://bitbucket.org/jdt1204/byu_data_structures/src/master/assignments/cyl_choose_your_language/) for more information on how to create branches.
 1. Write your Wiki entry locally on your machine in a `.md` file.  Do not use spaces in the filename.  BitBucket doesn't seem to like it.
-1. Edit this document and add a link to either the Data Structures or Algorithms sections below (you can look below for syntax on how to do that). 
+1. Edit this document and add a link to either the Data Structures or Algorithms sections below (you can look below for syntax on how to do that).
 
 After pushing your changes, be sure your browser url uses the **name of your branch** rather than the commit GUID.  If the GUID is in the URL, you'll only see the changes in that commit (which means you likely won't see your new changes).
 
-For any other questions, reach out to Dr. Albrecht (`@doconix` in IS Slack team) or John Turner (`@johnt` in IS Slack team). 
+For any other questions, reach out to Dr. Albrecht (`@doconix` in IS Slack team) or John Turner (`@johnt` in IS Slack team).
 
 ## Data Structures
 
@@ -52,11 +52,11 @@ For any other questions, reach out to Dr. Albrecht (`@doconix` in IS Slack team)
 
 ## Language Choices
 
-Create a document for your language choices, and add it to this list (this is referencing the "Choose your Language" assignment in Learning Suite): 
+Create a document for your language choices, and add it to this list (this is referencing the "Choose your Language" assignment in Learning Suite):
 
 - [Python](Python_Choose_Language_Assignment.md)
 - [Python](Everything_Python.md)
-- [Swift](Swift_Choose_Language_Assignment.md)
+- [Swift](swift.md)
 
 ## Miscellaneous
 
