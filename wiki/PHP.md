@@ -18,14 +18,13 @@ The PHP Documentation says that references are not the same as pointers in C. Ho
 
 [This site](http://code.stephenmorley.org/php/references-tutorial/) describes what PHP references are in a very simple manner.
 
-Basically, in it's internal system, PHP stores variable references in a data structure known as the _zval_struct. This structure stores the value of the variable, its type, and a count of references made to that variable. This counter is called the refcount. When a new variable is created, the refcount is incremented, and the variable is added to the Symbol Table:
+Basically, in it's internal system, PHP stores variable references in a data structure known as the `_zval_struct`. This structure stores the value of the variable, its type, and a count of references made to that variable. This counter is called the `refcount`. When a new variable is created, the `refcount` is incremented, and the variable is added to the Symbol Table:
 
-**PHP**
 ```php
 $a = 'some value';
 ```
 
-The Symbol Table is a table of mappings of the variable name and the value of that variable. It also contains the zval for that variable. When a variable is assigned by reference, it points to the same zval as another variable.
+The Symbol Table is a table of mappings of the variable name and the value of that variable. It also contains the `zval` for that variable. When a variable is assigned by reference, it points to the same `zval` as another variable.
 
 ```php
 $a = 12;
