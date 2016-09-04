@@ -1,6 +1,6 @@
 ## Variable References in PHP ##
-Author:
-* Justin Jamison
+
+* Author: Justin Jamison
 
 In PHP, references are a way to refer to a value in memory under more than one variable. The actual value is the same for both variables, but can be referenced by both of them.
 

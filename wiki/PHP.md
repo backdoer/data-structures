@@ -8,9 +8,9 @@ PHP's name is a recursive acronym that stands for PHP: Hypertext Processor.
 If you have anything you would like to add to this tutorial about PHP, feel free to do so!
 
 ## Variable References in PHP ##
-Author:
-* Justin Jamison
-* [File - cyl_justin.md](cyl_Justin.md)
+
+* Author: Justin Jamison
+* [File](cyl_Justin.md)
 
 In PHP, references are a way to refer to a value in memory under more than one variable. The actual value is the same for both variables, but can be referenced by both of them.
 
