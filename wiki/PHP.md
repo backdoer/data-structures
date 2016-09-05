@@ -117,4 +117,6 @@ Although `$check` was set to the value that `reference()` returns, it was not se
  - [PHP Documentation (English)](https://secure.php.net/manual/en/)
  - [Passing Variables by Reference](http://php.net/manual/en/language.references.whatare.php)
  - [PHP references tutorial](http://code.stephenmorley.org/php/references-tutorial/)
+
+ ## Further Reading ##
  - [Reference Mapping in PHP](http://php.net/manual/en/language.references.unset.php#82955)
