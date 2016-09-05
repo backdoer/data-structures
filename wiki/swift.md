@@ -64,6 +64,24 @@ There are three types of object references:
 1. Unowned references
   - Unowned references are similar to weak references in that they do not increase an object's retained count.  However, unowned references are not optional, that is this object does not become nil when it's reference is deallocated.  However, unlike a weak reference, an error will occur if you attempt to call an unowned reference when it has been deallocated.
 
+##Closures
+Closures are self-contained blocks of functionality that can be passed around and used in your code.  Closures can captures and store references to any objects and variables from the context in which they are defined.  This is called "closing over" those constants and variables.
+
+The closure expression syntax has the following general form:
+
+{ (parameters) -> return type in
+    statements
+}
+
+An example of a closure can be found in [Derik Hasvold's code example](derik_hasvold_swift_example.txt)
+
+There are ways to optimize closures to reduce syntax clutter.
+These optimizations include:
+
+  - Inferring parameter and return value types from context.
+  - Implicit returns from single-expression closures.
+  - Shorthand argument names. See example in [Derik Hasvold's code example](derik_hasvold_swift_example.txt)
+  - Trailing closure syntax.
 
 ##Resources
 - [Main Website](https://swift.org/)
