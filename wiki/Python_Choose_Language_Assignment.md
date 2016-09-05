@@ -54,7 +54,22 @@ y = 23    # Error: Variable `y` is read-only
 - More success stories found [here](https://www.python.org/about/success/)
 
 ## Memory Management:
-- According to python docs, heap management is performed by the interpreter itself.  The user has no control over it [Python Docs](https://docs.python.org/3/c-api/memory.html)
+- Python does not specify how memory management should be implemented. The most common implementation of Python, CPython, uses a *private heap* to store all objects. [Python Docs](https://docs.python.org/3/c-api/memory.html)
+
+From the Python documentation:
+
+>Memory management in Python involves a private heap containing 
+>all Python objects and data structures. The management of this 
+>private heap is ensured internally by the Python memory manager. 
+>The Python memory manager has different components which deal with 
+>various dynamic storage management aspects, like sharing, 
+>segmentation, preallocation or caching.
+
+- This means that *no* actual values live on the stack, only references to the objects on the stack.
+
+- Inside the heap, objects of different types are handled differently. So integers are treated differently than strings or dictionaries, because they have different storage requirements, etc.
+
+- There is no way for a programmer to control the Python memory manager. 
 
 ## Garbage Collection:
 - Python does garbage collection for the user.
@@ -89,3 +104,7 @@ if __name__ == "__main__":
     ret = main()
     sys.exit(ret)
 ```
+
+## Code Examples
+
+[Derek Brimley](derek_brimley_python_cyl.md)
