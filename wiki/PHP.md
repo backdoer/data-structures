@@ -118,7 +118,7 @@ reference();
 echo '<p>' . $check . '</p>'; // $check is still "2"!
 ```
 
-Although `$check` was set to the value that `reference()` returns, it was not set *as a reference* to the value of `$test`. Instead, it was set to *the value* that `$test` had at that moment in time!
+Although `$check` was set to the value that `reference()` returns, it was not set *as a reference* to the value of `$test`. Instead, it was set to *the value* that `$test` had at that moment in time. Thus, even when a function is *specifically defined* to return a reference (instead of a value), if the `&` is not used when the function is called, the function will not actually return the reference!
 
 ## References ##
  - [PHP Documentation (English)](https://secure.php.net/manual/en/)
