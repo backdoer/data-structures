@@ -104,6 +104,37 @@ Note: `weak` and `unowned` do not always prevent strong reference cycles from ha
 
 More Examples: [ARC Examples](Swift_ARC_Examples.md)
 
+## Networking in Swift - AlamoFire
+
+Swift makes networking (making network calls, receiving data from web services, etc...) fairly simple. However, wiring up your own networking methods in Swift is akin to attempting to wire up your own networking classes and methods in Python when the pip-package `requests` exists--you just don't do it.
+
+AlamoFire is Swift's `requests`. Built by the people that were behind the popular Objective-C networking library, `AFNetworking`, AlamoFire is written in pure Swift, making it incredibly easy-to-read, and easy-to-use. It doesn't depend on any Objective-C from it's predecessor.
+
+Out of the box, AlamoFire comes with the following features:
+
+- Chainable Request / Response methods
+- URL / JSON / plist parameter encoding
+- Upload File / Data / Stream / MultipartFormData
+- Download using Request or Resume Data
+- Authentication with NSURL Credential
+- HTTP Response Validation
+- TLS Certificate and Public Key Pinning
+- Progress Closure and NSProgress (i.e., ability to show progress of network call to user)
+- cURL Debug Output
+- Comprehensive Unit Test Coverage
+- An insane amount of documentation and tutorials on the web, due to its popularity
+
+AlamoFire is easy to install, allowing the developer to leverage CocoaPods (the dependency manager for iOS development, akin to `pip` for Python), Carthage (another dependency manager), or manual installation from their `git` repo.
+
+So, unless your use-case is extremely particular, involving custom-written encoders and decoders, there's really no reason for you to re-invent the wheel when it comes to Swift networking. AlamoFire is the tried and tested way to accomplish complex, interdependent iOS apps, which communicate with one or more web services.
+
+Check out John Turner's small tutorial on hitting the OpenWeatherMap API in Swift using AlamoFire [here](alamofire_example.md).
+
+### AlamoFire Readings, Reviews, and Tuts
+
+- [AlamoFire Main Page / Overview](https://github.com/Alamofire/Alamofire)
+- [AlamoFire Docs](http://cocoadocs.org/docsets/Alamofire/3.4.2/)
+- [AlamoFire + Swift 2.2 + iOS 9.3 App Tutorial](https://www.raywenderlich.com/121540/alamofire-tutorial-getting-started)
 
 ##Resources
 - [Main Website](https://swift.org/)
@@ -113,7 +144,5 @@ More Examples: [ARC Examples](Swift_ARC_Examples.md)
 - [Thinking in Swift (Part 2)](https://www.accelebrate.com/blog/thinking-swift-part-ii/)
 - [LLVM Language Reference Manual](http://llvm.org/docs/LangRef.html)
 - [Swift Compiler Architecture](https://swift.org/compiler-stdlib/#compiler-architecture)
-
-[swift_book]: https://swift.org/documentation/TheSwiftProgrammingLanguage(Swift3).epub
-
-[^1]: [https://www.accelebrate.com/blog/thinking-swift-part-ii/](https://www.accelebrate.com/blog/thinking-swift-part-ii/)
+- [Swift Book](https://swift.org/documentation/TheSwiftProgrammingLanguage) - (Swift3).epub
+- [^1]: [https://www.accelebrate.com/blog/thinking-swift-part-ii/](https://www.accelebrate.com/blog/thinking-swift-part-ii/)
