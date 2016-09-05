@@ -94,11 +94,11 @@ If we were to call `reference()` without the ampersand `&` we would instead get 
 ```php
 $check = reference(); // $check is set to whatever value reference() returns. reference() returns "2".
 
-echo '<p>' . $check . '</p>'; // Check is now "2".
+echo '<p>' . $check . '</p>'; // $check is now "2".
 
 reference();
 
-echo '<p>' . $check . '</p>'; // Check is still "2"!
+echo '<p>' . $check . '</p>'; // $check is still "2"!
 ```
 
 Although `$check` was set to the value that `reference()` returns, it was not set *as a reference* to the value of `$test`. Instead, it was set to *the value* that `$test` had at that moment in time!
