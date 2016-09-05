@@ -19,17 +19,26 @@
 
 ## Basic Philosophy:
 
+### The Zen of Python
+
 - Beautiful is better than ugly
 - Explicit is better than implicit
 - Simple is better than complex
 - Complex is better than complicated
 - Readability counts
 
-## Drawbacks: 
+The rest of the Zen can be found if you
+
+```
+import this
+```
+inside a python shell
+
+## Drawbacks:
 - It's a high level language, so you're sacrificing efficiency for convenience and readability.
-- Doing things closer to the hardware is difficult because it is high-level.  Any kernal or special threading issues will be very difficult to resolve. 
+- Doing things closer to the hardware is difficult because it is high-level.  Any kernal or special threading issues will be very difficult to resolve.
 - Misnamed variables won't be caught unless code is run
-- when working with nested functions, accessing variables in an outer scope is not possible in Python 2. There is a workaround in Python 3 via the [nonlocal statement](https://docs.python.org/3/reference/simple_stmts.html#the-nonlocal-statement), but that introduces a whole other pain point of backwards non-compatibility between Python 2 and 3. 
+- when working with nested functions, accessing variables in an outer scope is not possible in Python 2. There is a workaround in Python 3 via the [nonlocal statement](https://docs.python.org/3/reference/simple_stmts.html#the-nonlocal-statement), but that introduces a whole other pain point of backwards non-compatibility between Python 2 and 3.
 - One could also say that python’s inability to distinguish between declaration and usage of a variable is an issue. What this means is that one could instantiate a variable and later accidentally write over that same variable with a redeclaration. To distinguish between the two, it could be nice to have two keywords: “let” to declare variables as read-only, and “var” variables as normal.
 
 Consider this example:
@@ -58,18 +67,18 @@ y = 23    # Error: Variable `y` is read-only
 
 From the Python documentation:
 
->Memory management in Python involves a private heap containing 
->all Python objects and data structures. The management of this 
->private heap is ensured internally by the Python memory manager. 
->The Python memory manager has different components which deal with 
->various dynamic storage management aspects, like sharing, 
+>Memory management in Python involves a private heap containing
+>all Python objects and data structures. The management of this
+>private heap is ensured internally by the Python memory manager.
+>The Python memory manager has different components which deal with
+>various dynamic storage management aspects, like sharing,
 >segmentation, preallocation or caching.
 
 - This means that *no* actual values live on the stack, only references to the objects on the stack.
 
 - Inside the heap, objects of different types are handled differently. So integers are treated differently than strings or dictionaries, because they have different storage requirements, etc.
 
-- There is no way for a programmer to control the Python memory manager. 
+- There is no way for a programmer to control the Python memory manager.
 
 ## Garbage Collection:
 - Python does garbage collection for the user.
@@ -86,11 +95,11 @@ Two great approaches for deciding when to manually kick off garbage collection a
 
 ```python
 import sys, gc
- 
+
 def make_cycle():
     l = { }
     l[0] = l
- 
+
 def main():
     collected = gc.collect()
     print "Garbage collector: collected %d objects." % (collected)
@@ -99,7 +108,7 @@ def main():
         make_cycle()
     collected = gc.collect()
     print "Garbage collector: collected %d objects." % (collected)
- 
+
 if __name__ == "__main__":
     ret = main()
     sys.exit(ret)
