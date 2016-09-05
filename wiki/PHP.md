@@ -90,7 +90,7 @@ function &reference()
     return $local;
 }
 
-$check = &reference(); // $check is set to point to whatever $reference() returns. &reference() returns the reference to global variable $test.
+$check = &reference(); // $check is set to point to whatever &reference() returns. &reference() returns the reference to global variable $test.
 
 echo '<p>' . $check . '</p>'; // Check is now "2".
 
