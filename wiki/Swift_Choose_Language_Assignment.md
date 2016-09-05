@@ -10,13 +10,11 @@ For Swift, the process looks like this:
 
 source code -> Swift Abstract Syntax Tree (AST) -> Swift Intermediate Language (SIL) -> LLVM Intermediate Representation (LLVM IR) -> machine code
 
-The following provides an example of simple code analyzed at each of the three stages mentioned above.
-- [Nate_Johnson_Example](Swift_Nate_Johnson.md)
+[Nate_Johnson_Example](Swift_Nate_Johnson.md) provides an example of simple code analyzed at each of the three stages mentioned above.
 
 ## Resources
 - [Thinking in Swift (Part 2)](https://www.accelebrate.com/blog/thinking-swift-part-ii/)
 - [LLVM Language Reference Manual](http://llvm.org/docs/LangRef.html)
 - [Swift Compiler Architecture](https://swift.org/compiler-stdlib/#compiler-architecture)
 
-## Footnotes
-[^1]: https://www.accelebrate.com/blog/thinking-swift-part-ii/
+[^1]: [https://www.accelebrate.com/blog/thinking-swift-part-ii/](https://www.accelebrate.com/blog/thinking-swift-part-ii/)

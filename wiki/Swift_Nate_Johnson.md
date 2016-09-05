@@ -62,7 +62,9 @@ swiftc –emit-ir onion.swift
 
 The above terminal command outputs the LLVM IR for the Swift code. Below is the line of output corresponding to the addition operation.
 
-```%9 = call { i64, i1 } @llvm.sadd.with.overflow.i64(i64 %7, i64 %8)```
+```
+%9 = call { i64, i1 } @llvm.sadd.with.overflow.i64(i64 %7, i64 %8)
+```
 
 The operation is now transformed into a call to the llvm.sadd.with.overflow.i64 instruction.
 
@@ -74,5 +76,4 @@ swiftc –emit-assembly onion.swift
 
 The above terminal command outputs the assembly which will generate the machine code. The source code for the addition operation does translate into the ```addq``` instruction.
 
-## Footnotes
-[^1]: https://www.accelebrate.com/blog/thinking-swift-part-ii/
+[^1]: [https://www.accelebrate.com/blog/thinking-swift-part-ii/](https://www.accelebrate.com/blog/thinking-swift-part-ii/)
