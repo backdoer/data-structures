@@ -51,10 +51,25 @@ Release History:
 - New language
 - Each release changes how things are done (always having to learn because it is so new)
 
+##Memory management
+Swift memory management is handled "behind the scenes."  However, there are some things that you should know.
+
+Apple's version of automated memory management is called ARC, which stands for Automatic Reference Counting.  ARC tracks and manages your app's memory usage so you don't have too.  ARC's most basic functionality is that it only frees up memory for objects when there are *zero* strong references to them.  In order to understand more, it's important to know how object references work in Swift.
+
+There are three types of object references:
+1. Strong references
+    - A strong reference protects an object from getting deallocated by ARC by increasing it's retain count by one.  A reference is strong by default.
+1. Weak references
+  - A weak reference is a pointer that doesn't increase the retain count of an object.  This means the object is not protected from being deallocated by ARC.  If you attempt to access a weak reference that has been deallocated it's value will be nil.  See [Derik Hasvold's code example](derik_hasvold_swift_example.txt) to learn how a weak reference is declared.
+1. Unowned references
+  - Unowned references are similar to weak references in that they do not increase an object's retained count.  However, unowned references are not optional, that is this object does not become nil when it's reference is deallocated.  However, unlike a weak reference, an error will occur if you attempt to call an unowned reference when it has been deallocated.
+
+
 ##Resources
 - [Main Website](https://swift.org/)
 - [*The Swift Programming Language*][swift_book]
 - [Documentation](https://swift.org/documentation/#the-swift-programming-language)
 - [Getting Started Tutorial](https://swift.org/getting-started/#using-the-lldb-debugger)
+- [Strong vs. Weak References](http://krakendev.io/blog/weak-and-unowned-references-in-swift)
 
 [swift_book]: https://swift.org/documentation/TheSwiftProgrammingLanguage(Swift3).epub
