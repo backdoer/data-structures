@@ -58,7 +58,9 @@ function ref_add(&$var) {
 }
 
 $a = 12;
-$b =& $a; // Defining $b as pointing to the value "12" in memory - same value as $a! Both variables point to the same memory object - they have the same zval. PHP will treat both variables exactly the same!
+
+// Defining $b as pointing to the value "12" in memory - the same value as $a! Both variables point to the same memory object - they have the same zval.
+$b =& $a;
 
 reference($a); // Returns "12".
 reference($b); // Returns "12".
@@ -69,7 +71,12 @@ value_add($a); // This will change the variable $var that is local to the functi
 echo "<p>" . $b . "</p>"; // Thus, this is still 12.
 echo "<p>" . $a . "</p>"; // Also still 12.
 
-ref_add($b); // This will add 1 to the value that $b is pointing to. Since we are passing in the reference to the value "12" (rather than the actual value "12"), the function will also change the value for all other variables that point to that value. Since $a is pointing to that same value, $a will also change to 13!
+/*
+ * ref_add($b) will add 1 to the value that $b is pointing to. Since we are passing in the reference to the value "12" (rather than the actual value "12"),
+ * the function will also change the value for all other variables that point to that value.
+ * Since $a is pointing to that same value, $a will also change to 13!
+ */
+ref_add($b);
 
 echo "<p>" . $b . "</p>"; // 13
 echo "<p>" . $a . "</p>"; // 13
