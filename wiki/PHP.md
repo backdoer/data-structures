@@ -16,9 +16,11 @@ In PHP, references are a way to refer to a value in memory under more than one v
 
 The PHP Documentation says that references are not the same as pointers in C. However, the essence of what the documentation is saying is that references are not actual memory addresses in PHP - they are aliases that point to a value in the Symbol Table.
 
-[This site](http://code.stephenmorley.org/php/references-tutorial/) describes what PHP references are in a very simple manner.
+[This site](http://code.stephenmorley.org/php/references-tutorial/) describes PHP references in a very simple manner.
 
-Basically, in it's internal system, PHP stores variable references in a data structure known as the `_zval_struct`. This structure stores the value of the variable, its type, and a count of references made to that variable. This counter is called the `refcount`. When a new variable is created, the `refcount` is incremented, and the variable is added to the Symbol Table:
+### How References are Mapped to Values ###
+
+Behind the scenes, PHP stores variable references in a data structure known as the `_zval_struct`. This structure stores the value of the variable, its type, and a count of references made to that variable. This counter is called the `refcount`. When a new variable is created, the `refcount` is incremented, and the variable is added to the Symbol Table:
 
 ```php
 $a = 'some value';
@@ -73,9 +75,46 @@ echo "<p>" . $b . "</p>"; // 13
 echo "<p>" . $a . "</p>"; // 13
 ```
 
-More coming soon!
+### Returning References ###
+Returning references means creating a function whose return value is the reference to a value, instead of the value itself. For example, this function returns a reference to `$test`, which is a global variable whose value gets changed every time `reference()` is called. When we call `reference()`, it increments the value of `$test` and all variables set to point to the value of `$test` reflect that new value:
+
+```php
+$test = 1;
+$check = NULL;
+
+// The "&" indicates this function should return a reference, instead of a value.
+function &reference()
+{
+    $local =& $GLOBALS["test"]; // The variable $local in this function references global variable $test.
+    $local++;
+    return $local;
+}
+
+$check = &reference(); // $check is set to point to whatever $reference() returns. &reference() returns the reference to global variable $test.
+
+echo '<p>' . $check . '</p>'; // Check is now "2".
+
+reference();
+
+echo '<p>' . $check . '</p>'; // Check is now "3", because calling the function reference() again incremented $test's value.
+```
+
+If we were to call `reference()` without the ampersand `&` we would instead get the following result:
+
+```php
+$check = reference(); // $check is set to whatever value reference() returns. reference() returns "2".
+
+echo '<p>' . $check . '</p>'; // Check is now "2".
+
+reference();
+
+echo '<p>' . $check . '</p>'; // Check is still "2"!
+```
+
+Although `$check` was set to the value that `reference()` returns, it was not set *as a reference* to the value of `$test`. Instead, it was set to *the value* that `$test` had at that moment in time!
 
 ## References ##
  - [PHP Documentation (English)](https://secure.php.net/manual/en/)
  - [Passing Variables by Reference](http://php.net/manual/en/language.references.whatare.php)
  - [PHP references tutorial](http://code.stephenmorley.org/php/references-tutorial/)
+ - [Reference Mapping in PHP](http://php.net/manual/en/language.references.unset.php#82955)
