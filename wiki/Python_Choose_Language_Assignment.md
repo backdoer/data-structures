@@ -104,3 +104,7 @@ if __name__ == "__main__":
     ret = main()
     sys.exit(ret)
 ```
+
+## Code Examples
+
+[Derek Brimley](derek_brimley_python_cyl.md)
