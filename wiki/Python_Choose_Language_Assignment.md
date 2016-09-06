@@ -34,6 +34,15 @@ import this
 ```
 inside a python shell
 
+## Strengths/Advantages
+- Easy to use/learn
+- It's object oriented and, because simplicity is stressed, it's easy to apply OOP principles. Additionally, Python comes with many built-in object types and data structures (eg. lists, dictionaries, strings, etc.) that are extremely flexible and easy to implement
+- Object-oriented nature makes it an ideal tool for scripting
+- OOP is also an _option_, meaning such principles can be applied if and when constraints allow
+- Highly portable, meaning that it runs on basically every major platform available today
+- Large support community as seen through the number of third-party libraries (Look at [PyPi](https://pypi.python.org/pypi)) for examples with Python3)
+- It's *FREE*
+
 ## Drawbacks:
 - It's a high level language, so you're sacrificing efficiency for convenience and readability.
 - Doing things closer to the hardware is difficult because it is high-level.  Any kernal or special threading issues will be very difficult to resolve.
@@ -118,3 +127,4 @@ if __name__ == "__main__":
 
 [Derek Brimley](derek_brimley_python_cyl.md)
 [Dustin Belliston](dustin_belliston_python_cyl.md)
+[Matt Rider](matt_rider_python_cyl.md)
