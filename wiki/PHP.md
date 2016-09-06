@@ -99,11 +99,11 @@ function &reference()
 
 $check = &reference(); // $check is set to point to whatever &reference() returns. &reference() returns the reference to global variable $test.
 
-echo '<p>' . $check . '</p>'; // Check is now "2".
+echo '<p>' . $check . '</p>'; // $check is now "2".
 
 reference();
 
-echo '<p>' . $check . '</p>'; // Check is now "3", because calling the function reference() again incremented $test's value.
+echo '<p>' . $check . '</p>'; // $check is now "3", because calling the function reference() again incremented $test's value.
 ```
 
 If we were to call `reference()` without the ampersand `&` we would instead get the following result:
