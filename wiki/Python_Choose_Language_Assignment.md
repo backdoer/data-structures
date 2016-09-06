@@ -128,4 +128,4 @@ You can see the line of the function in the first column, the bytecode on the se
 - Also, here's a definition of [bytecode](http://whatis.techtarget.com/definition/bytecode) if you needed it like I did.)
 - Another helpful example on using [dis.dis](http://akaptur.com/blog/2013/08/14/python-bytecode-fun-with-dis/) in particular.
 
-+- [Ali's Code Example](Ali)
+[Ali's Code Example](Ali)
