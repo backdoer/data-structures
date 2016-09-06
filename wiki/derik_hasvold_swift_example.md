@@ -5,7 +5,7 @@
 
 //here is an example of a closure in swift.  This closure is labeled as a parameter called "completionBlock"  an explict reference to "self" is made in brackets, then the variables the getUser returns are named as "userJSON" and "errorCode".  The logic of the closure is defined after the "in" statement.
 userApi.getUser(id, completionBlock: { [weak self](userJSON, errorCode) in //make the reference to self explicitly weak
-				guard let strongSelf = self else { return } //guard statement = create strong, immutable instace of self called "strongSelf" if self is not nil, if it's not then return or break out of the closure.
+				guard let strongSelf = self else { return } //guard statement = create strong, immutable instance of self called "strongSelf" if self is not nil, if it's not then return or break out of the closure.
                 //guard let statement is a simple way to do error handling in swift
 				// error
 				if (errorCode != nil || userJSON == nil) {
@@ -16,12 +16,12 @@ userApi.getUser(id, completionBlock: { [weak self](userJSON, errorCode) in //mak
                     let apiUser = User.MR_importFromObject(userJSON!)
                     apiUser.lastUpdated = NSDate()
 
-                    // if let statement.  if the cast of "apiUser.favorites" as a set of favorites succeedes, then an immutable variable "favorites" is created and the code inside the curly brackets is executed.  If not the code is skipped and the variable is not created.
+                    // if let statement.  if the cast of "apiUser.favorites" as a set of favorites succeeds, then an immutable variable "favorites" is created and the code inside the curly brackets is executed.  If not the code is skipped and the variable is not created.
                     if let favorites = apiUser.favorites as? Set<Favorite> {
 
                         var duplicateFavorites = [Favorite]()
 
-                       //example of a swift for in statement.  This works on enumberable data structures such as arrays and dictionaries
+                       //example of a swift for in statement.  This works on enumerable data structures such as arrays and dictionaries
                         for favorite in favorites {
 
                             //short hand syntax for a closure.  "$0" represents a single favorite from the favorites set as the name is not important.

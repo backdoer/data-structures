@@ -64,7 +64,7 @@ There are three types of object references:
 1. Strong references
     - A strong reference protects an object from getting deallocated by ARC by increasing it's retain count by one.  A reference is strong by default.
 1. Weak references
-  - A weak reference is a pointer that doesn't increase the retain count of an object.  This means the object is not protected from being deallocated by ARC.  If you attempt to access a weak reference that has been deallocated it's value will be nil.  See [Derik Hasvold's code example](derik_hasvold_swift_example.txt) to learn how a weak reference is declared.
+  - A weak reference is a pointer that doesn't increase the retain count of an object.  This means the object is not protected from being deallocated by ARC.  If you attempt to access a weak reference that has been deallocated it's value will be nil.  See [Derik Hasvold's code example](derik_hasvold_swift_example.md) to learn how a weak reference is declared.
 1. Unowned references
   - Unowned references are similar to weak references in that they do not increase an object's retained count.  However, unowned references are not optional, that is this object does not become nil when it's reference is deallocated.  However, unlike a weak reference, an error will occur if you attempt to call an unowned reference when it has been deallocated.
 
