@@ -61,6 +61,7 @@ Swift memory management is handled "behind the scenes."  However, there are some
 Apple's version of automated memory management is called ARC, which stands for Automatic Reference Counting.  ARC tracks and manages your app's memory usage so you don't have too.  ARC's most basic functionality is that it only frees up memory for objects when there are *zero* strong references to them.  In order to understand more, it's important to know how object references work in Swift.
 
 There are three types of object references:
+
 1. Strong references
     - A strong reference protects an object from getting deallocated by ARC by increasing it's retain count by one.  A reference is strong by default.
 1. Weak references
