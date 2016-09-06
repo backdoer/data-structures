@@ -63,6 +63,45 @@ source code -> Swift Abstract Syntax Tree (AST) -> Swift Intermediate Language (
 
 [Swift Compiler](Swift_Nate_Johnson.md) provides an example of simple code analyzed at each of the three stages mentioned above.
 
+## Automatic Reference Counting (Memory Management)
+*written by Jameson Ricks*
+
+As mentioned above, Swift has Automatic Reference Counting (ARC) that makes memory management easy. Whenever a new instance of a class is created, ARC allocates memory for that object. When the object is no longer needed, ARC automatically frees up the memory that was being used by that object.
+
+ARC tracks how many properties, constants, and variables are currently referring to each class instance. ARC won't deallocate an instance of something until there are no active references to that instance. Whenever a property, constant, or variable is assigned, a *strong reference* is created for that instance. The reason these references are referred to as "strong" is because these references do not allow ARC to deallocate an instance when a strong reference is present.
+
+Additionally, you can override built in `init` and `deinit` functions to print to the console, or do other actions when a class is initialized or de-initilized by ARC.
+
+As mentioned above, a *strong reference cycle* causes two separate classes to no be full de-initilized when the variables are no longer in use. To prevent strong reference cycles, you can use `weak` references to class instances.
+For example:
+
+```
+class Person {
+    let name: String
+    init(name: String) { self.name = name }
+    var apartment: Apartment?
+    deinit { print("\(name) is being deinitialized") }
+}
+
+class Apartment {
+    let unit: String
+    init(unit: String) { self.unit = unit }
+    weak var tenant: Person?
+    deinit { print("Apartment \(unit) is being deinitialized") }
+}
+
+/* Excerpt From: Apple Inc. “The Swift Programming Language (Swift 3).” */
+```
+
+Setting the `weak` reference in Apartment prevents a strong reference cycle from being created when instantiating objects as variables that relate to each other.
+
+Similarly, there is an `unowned` reference that does not keep a strong reference to a referring instance. However, an `unowned` reference is *always* assumed to have a value and cannot be used as an optional value (i.e., no `?` after declaring the variable).
+
+Note: `weak` and `unowned` do not always prevent strong reference cycles from happening. There are some cases where it's useful to combine an unowned property on one class and an implicitly unwrapped optional property (indicated by a `!` at the end of it's type annotation) on the other class.
+
+More Examples: [ARC Examples](Swift_ARC_Examples.md)
+
+
 ##Resources
 - [Main Website](https://swift.org/)
 - [*The Swift Programming Language*][swift_book]
