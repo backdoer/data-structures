@@ -55,6 +55,38 @@ Release History:
 - New language
 - Each release changes how things are done (always having to learn because it is so new)
 
+##Memory management
+Swift memory management is handled "behind the scenes."  However, there are some things that you should know.
+
+Apple's version of automated memory management is called ARC, which stands for Automatic Reference Counting.  ARC tracks and manages your app's memory usage so you don't have too.  ARC's most basic functionality is that it only frees up memory for objects when there are *zero* strong references to them.  In order to understand more, it's important to know how object references work in Swift.
+
+There are three types of object references:
+1. Strong references
+    - A strong reference protects an object from getting deallocated by ARC by increasing it's retain count by one.  A reference is strong by default.
+1. Weak references
+  - A weak reference is a pointer that doesn't increase the retain count of an object.  This means the object is not protected from being deallocated by ARC.  If you attempt to access a weak reference that has been deallocated it's value will be nil.  See [Derik Hasvold's code example](derik_hasvold_swift_example.md) to learn how a weak reference is declared.
+1. Unowned references
+  - Unowned references are similar to weak references in that they do not increase an object's retained count.  However, unowned references are not optional, that is this object does not become nil when it's reference is deallocated.  However, unlike a weak reference, an error will occur if you attempt to call an unowned reference when it has been deallocated.
+
+##Closures
+Closures are self-contained blocks of functionality that can be passed around and used in your code.  Closures can captures and store references to any objects and variables from the context in which they are defined.  This is called "closing over" those constants and variables.
+
+The closure expression syntax has the following general form:
+
+{ (parameters) -> return type in
+    statements
+}
+
+An example of a closure can be found in [Derik Hasvold's code example](derik_hasvold_swift_example.txt)
+
+There are ways to optimize closures to reduce syntax clutter.
+These optimizations include:
+
+  - Inferring parameter and return value types from context.
+  - Implicit returns from single-expression closures.
+  - Shorthand argument names. See example in [Derik Hasvold's code example](derik_hasvold_swift_example.txt)
+  - Trailing closure syntax.
+
 ## The Swift Compiler
 In the process of turning source code into machine code, there are typically three stages the code goes through in order to get there. "The source code is typically turned into an intermediate form, optimized, and then transformed into machine code. Those jobs can be split up into three separate components – the frontend, the optimizer, and the backend."[^1]
 
@@ -141,6 +173,8 @@ Check out John Turner's small tutorial on hitting the OpenWeatherMap API in Swif
 - [*The Swift Programming Language*][swift_book]
 - [Documentation](https://swift.org/documentation/#the-swift-programming-language)
 - [Getting Started Tutorial](https://swift.org/getting-started/#using-the-lldb-debugger)
+- [Strong vs. Weak References](http://krakendev.io/blog/weak-and-unowned-references-in-swift)
+
 - [Thinking in Swift (Part 2)](https://www.accelebrate.com/blog/thinking-swift-part-ii/)
 - [LLVM Language Reference Manual](http://llvm.org/docs/LangRef.html)
 - [Swift Compiler Architecture](https://swift.org/compiler-stdlib/#compiler-architecture)
