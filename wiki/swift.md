@@ -4,6 +4,7 @@
 ##Code Examples
 - [Swift Basics](swift_basics.md)
   - TJ Murphy's Code Example
+- [Swift Compiler](Swift_Nate_Johnson.md) (Nate Johnson)
 
 ##History
 Development began in July 2010 by Chris Lattner. The 2014 Apple Worldwide Developers Conference (WWDC) application was the first app written in Swift. At that WWDC a beta version of swift was released to registered Apple developers. Along with the language *The Swift Programming Language* was also released and is available on the iBooks store and the official website. It is very easy to access and read. It explains all the fundamentals of the language.
@@ -51,10 +52,26 @@ Release History:
 - New language
 - Each release changes how things are done (always having to learn because it is so new)
 
+## The Swift Compiler
+In the process of turning source code into machine code, there are typically three stages the code goes through in order to get there. "The source code is typically turned into an intermediate form, optimized, and then transformed into machine code. Those jobs can be split up into three separate components – the frontend, the optimizer, and the backend."[^1]
+
+source code -> frontend, optimizer, backend -> machine code
+
+For Swift, the process looks like this:
+
+source code -> Swift Abstract Syntax Tree (AST) -> Swift Intermediate Language (SIL) -> LLVM Intermediate Representation (LLVM IR) -> machine code
+
+[Swift Compiler](Swift_Nate_Johnson.md) provides an example of simple code analyzed at each of the three stages mentioned above.
+
 ##Resources
 - [Main Website](https://swift.org/)
 - [*The Swift Programming Language*][swift_book]
 - [Documentation](https://swift.org/documentation/#the-swift-programming-language)
 - [Getting Started Tutorial](https://swift.org/getting-started/#using-the-lldb-debugger)
+- [Thinking in Swift (Part 2)](https://www.accelebrate.com/blog/thinking-swift-part-ii/)
+- [LLVM Language Reference Manual](http://llvm.org/docs/LangRef.html)
+- [Swift Compiler Architecture](https://swift.org/compiler-stdlib/#compiler-architecture)
 
 [swift_book]: https://swift.org/documentation/TheSwiftProgrammingLanguage(Swift3).epub
+
+[^1]: [https://www.accelebrate.com/blog/thinking-swift-part-ii/](https://www.accelebrate.com/blog/thinking-swift-part-ii/)
