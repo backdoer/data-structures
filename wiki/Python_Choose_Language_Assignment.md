@@ -34,6 +34,15 @@ import this
 ```
 inside a python shell
 
+## Strengths/Advantages
+- Easy to use/learn
+- It's object oriented and, because simplicity is stressed, it's easy to apply OOP principles. Additionally, Python comes with many built-in object types and data structures (eg. lists, dictionaries, strings, etc.) that are extremely flexible and easy to implement
+- Object-oriented nature makes it an ideal tool for scripting
+- OOP is also an _option_, meaning such principles can be applied if and when constraints allow
+- Highly portable, meaning that it runs on basically every major platform available today
+- Large support community as seen through the number of third-party libraries (Look at [PyPi](https://pypi.python.org/pypi)) for examples with Python3)
+- It's *FREE*
+
 ## Drawbacks:
 - It's a high level language, so you're sacrificing efficiency for convenience and readability.
 - Doing things closer to the hardware is difficult because it is high-level.  Any kernal or special threading issues will be very difficult to resolve.
@@ -120,8 +129,47 @@ if __name__ == "__main__":
 
 A list comprehension consists of brackets containing an expression followed by a for clause, then zero or more for or if clauses. The result will be a new list resulting from evaluating the expression in the context of the for and if clauses which follow it.
 
+## Bytecode Instructions
+
+- CPython is the default compiler for python.
+- [bytecode](https://docs.python.org/2/glossary.html#term-bytecode) is created on the fly whenever a .pyc module is imported or when python is run
+
+The `dis` module can be used to dissemble python bytecode. Here's a quick example I made similar to the one shown on the [documentation](https://docs.python.org/2/library/dis.html). Let's say you have some function `myfunc()`:
+
+```python
+def myfunc(some_list):
+    new_list = some_list
+    return len(some_list):
+```
+
+Useless code? Yep, but it's just for the sake of the example.
+Use `dis.dis` to disassemble your function:
+
+```python
+>>> import dis
+>>> dis.dis(myfunc)
+  2           0 LOAD_FAST                0 (some_list)
+              3 STORE_FAST               1 (new_list)
+
+  3           6 LOAD_GLOBAL              0 (len)
+              9 LOAD_FAST                1 (new_list)
+             12 CALL_FUNCTION            1 (1 positional, 0 keyword pair)
+             15 RETURN_VALUE
+```
+
+You can see the line of the function in the first column, the bytecode on the second column, and the variables, values, and names being called and stored on the stack on the right. We can see a variable `(some_list)` is loaded, a new variable `(new_list)` is stored to the stack, a global function (`len`) is loaded, and then a function is called and applied `new_list` variable. The value is then returned. Bada-boom, bada-bang.
+
+`dis` can be used with modules, classes, methods, functions, or code objects. Different feedback will be given for different bytesource objects.
+
+
+- Check out this list of available [python bytecode instructions](https://docs.python.org/2.4/lib/bytecodes.html) that the current Python compiler generates.
+- Also, here's a definition of [bytecode](http://whatis.techtarget.com/definition/bytecode) if you needed it like I did.)
+- Another helpful example on using [dis.dis](http://akaptur.com/blog/2013/08/14/python-bytecode-fun-with-dis/) in particular.
+
 ## Code Examples
 
 [Derek Brimley](derek_brimley_python_cyl.md)
 [Dustin Belliston](dustin_belliston_python_cyl.md)
 [Tyler Doermann](tyler_doermann_python_cyl.md)
+[Ali Wilkin](python_database_migrations.md)
+[Matt Rider](matt_rider_python_cyl.md)
