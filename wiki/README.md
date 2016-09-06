@@ -1,7 +1,3 @@
-this is another test by dr a
-
-Hey there this is cool.
-
 # Welcome to the Data Structures Wiki
 
 Here is where we'll be creating our own Data Structures / Algorithms knowledge base. Here's how to use it:
@@ -56,6 +52,7 @@ Create a document for your language choices, and add it to this list (this is re
 
 - [Python](Python_Choose_Language_Assignment.md)
 - [Python](Everything_Python.md)
+- [PHP](PHP.md)
 - [Swift](swift.md)
 
 ## Miscellaneous
