@@ -123,6 +123,12 @@ if __name__ == "__main__":
     sys.exit(ret)
 ```
 
+### Tyler Doermann
+##List Comprehensions (from the python documentation)
+- List comprehensions provide a concise way to create lists. Common applications are to make new lists where each element is the result of some operations applied to each member of another sequence or iterable, or to create a subsequence of those elements that satisfy a certain condition.
+
+A list comprehension consists of brackets containing an expression followed by a for clause, then zero or more for or if clauses. The result will be a new list resulting from evaluating the expression in the context of the for and if clauses which follow it.
+
 ## Bytecode Instructions
 
 - CPython is the default compiler for python.
@@ -164,5 +170,6 @@ You can see the line of the function in the first column, the bytecode on the se
 
 [Derek Brimley](derek_brimley_python_cyl.md)
 [Dustin Belliston](dustin_belliston_python_cyl.md)
+[Tyler Doermann](tyler_doermann_python_cyl.md)
 [Ali Wilkin](python_database_migrations.md)
 [Matt Rider](matt_rider_python_cyl.md)
