@@ -15,6 +15,21 @@ You can also declare multiple variables at once:
 or
 `var example1, example2, example3: String`
 
+You can specify a variable as optional as follows:
+`var surveyAnswer: String?`
+surveyAnswer is automatically set to nil
+
+An optional variable can also be assigned to a null value after having a value previously:
+`var serverResponseCode: Int? = 404`
+serverResponseCode contains an actual Int value of 404
+`serverResponseCode = nil`
+serverResponseCode now contains no value
+
+In order to access the value of an optional variable, you must unwrap it, but ONLY if it actually has a value and is not nil:
+`if convertedNumber != nil {
+    print("convertedNumber has an integer value of \(convertedNumber!).")
+}`
+
 ##Constants
 Constants have all the same capabilities of variables, except they cannot be changed once set. Here is how you set a constant:
 `let exampleConstant = 45`

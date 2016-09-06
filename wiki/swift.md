@@ -44,6 +44,9 @@ Release History:
 - Type Safe language: It helps you avoid using the wrong type in certain situations (e.g. passing a String when an Int is expected)
   - Swift performs *type checks* when compiling and flags them as errors so they can be fixed even before releasing an app or an update to an app
 - Swift uses type inference if a type is not declared
+- Optionals. You can specify whether a variable is required or optional, which allows a variable to potentially be null.
+- It uses dot-notation and the namespace system, which is similar to many other popular object-oriented languages.
+- Swift is compiled to llvm bit-code at compile time.
 
 
 ##Cons
