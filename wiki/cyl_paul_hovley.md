@@ -125,7 +125,9 @@ def raise_exception_method():
     raise Exception('Exceptional Exception')
 
 first_method()
-
+```
+Result
+```
 Traceback (most recent call last):
   File "./call_stack.py", line 19, in first_method
     second_method()
