@@ -107,7 +107,7 @@ False
 Objects are passed and assigned by reference
 Strings are passed and assigned by value
 Primitives are passed and assigned by value
-#Brief Call Stack Example
+#Brief Call Stack Traceback Example
 This brief example demonstrates what the call stack will look like after a number of methods
 are called in python
 ```python
