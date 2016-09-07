@@ -23,7 +23,7 @@ The following steps will help you get started:
 1. Create a directory where you'll keep the files for this course.  We'll call it `byu537`.
 1. In terminal, change to the `byu537` directory. Clone the class git repository: `git clone git@bitbucket.org:jdt1204/byu_data_structures.git`.  You should now have a new directory called `byu_data_structures`.  This is where assignments will be posted and where our wiki source is kept.
 
-Next, learn how to write markdown by going [https://confluence.atlassian.com/bitbucketserver/markdown-syntax-guide-776639995.html](a documentation page).  It's pretty easy to pick up. 
+Next, learn how to write markdown by going [https://confluence.atlassian.com/bitbucketserver/markdown-syntax-guide-776639995.html](a documentation page).  It's pretty easy to pick up.
 
 ## Your Work Session
 
@@ -52,10 +52,10 @@ When you are finished with your assignment, follow these steps:
 When it is successfully pushed, BitBucket should give you a nice URL that looks something like this:
 
 ```
-remote: 
+remote:
 remote: Create pull request for choose_a_language:
 remote:   https://bitbucket.org/jdt1204/byu_data_structures/pull-requests/new?source=cyl_your_name
-remote: 
+remote:
 ```
 
 Copy that link into your browser and submit a **Pull Request** for your branch to merge into `master`.  We will look at the contributions and code in your request, give a grade, and merge your content into the master branch.  You'll now see your changes on the site!
@@ -67,4 +67,3 @@ There are two parts to this assignment:
 
 1. Contribute to the main language page on our wiki.  The list at the top of this page details examples of what you can contribute.  Others will contribute to this page with you.
 1. Create a **new page** that is linked from your main language page.  You will be the sole author of this page.  Write a program in your language that shows off some capability of your language.  Your program should be 50-100 lines long (that's a rough guide).  On your page, walk the reader through the development of your program.  Explain the concepts  and algorithms your program uses.  Show input and output data.
-
