@@ -1,30 +1,86 @@
 ## PYTHON EXAMPLES
-##Passing values by reference Example
+##Passing objects by reference Example
 this example demonstrates that Python passes objects by reference, meaning that if an object is 
 passed to a method, any modification done to that object inside of the method it was passed to, will
 modify both the object inside the method and outside.
 ```python
 #Pointers/References
-def modify_dictionary(dictionary_ref):
-    dictionary_copy = dictionary_ref #dictionary_copy is actually pointing at the memory location of dictionary_ref
-    dictionary_copy["key"] = "modified"
-    print "Dictionary copy inside: " 
-    print dictionary_copy
+STARTING_VALUE = "unmodified"
+MODIFIED_CONST = "modified"
+STARTING_PRIMITIVE = 0
+MODIFIED_PRIMITIVE = 1
 
-dictionary_ref = {"key": "start"}
-print "Dictionary ref start value" 
-print dictionary_ref
+def test_pass_string_to_meth():
+    '''tests if modifying strings in methods affects the initial string outside of method'''
+    test_string = STARTING_VALUE
+    modify_string(test_string)
+    has_string_changed(test_string)
 
-modify_dictionary(dictionary_ref)
-print "Dictionary ref after: "
-print dictionary_ref
+def test_pass_obj_to_meth():
+    '''tests if modifying objects in methods affects the initial object outside of method'''
+    test_dict_obj = {"key": STARTING_VALUE}
+    modify_object(test_dict_obj) #pass dictionary and modify values
+    has_string_changed(test_dict_obj["key"])
 
-Dictionary ref start value
-{'key': 'start'}
-Dictionary copy inside: 
-{'key': 'modified'}
-Dictionary ref after: 
-{'key': 'modified'} 
+def test_pass_prim():
+    '''tests if primitives are passed to methods by value or by reference'''
+    test_prim = STARTING_PRIMITIVE
+    modify_prim(test_prim)
+    has_prim_changed(test_prim)
+ 
+def test_assign_obj():
+    '''tests if object assignment in python is by value or by reference'''
+    test_dict_obj = {"key": STARTING_VALUE}
+    test_copy_obj = test_dict_obj
+    test_copy_obj["key"] = MODIFIED_CONST
+    has_string_changed(test_dict_obj["key"])
+
+def test_assign_string():
+    '''tests if string assignment in python is by value or by reference'''
+    test_string = STARTING_VALUE
+    test_copy = test_string
+    test_copy = MODIFIED_CONST
+    has_string_changed(test_string)
+
+def test_assign_prim():
+    '''tests if primitive assignment in python is by value or by reference'''
+    test_prim = STARTING_PRIMITIVE
+    test_copy = test_prim
+    test_copy = MODIFIED_PRIMITIVE
+    has_prim_changed(test_prim)
+
+def modify_object(test_dict_obj):
+    test_dict_obj["key"] = MODIFIED_CONST
+
+def modify_string(test_string):
+    test_string = MODIFIED_CONST
+
+def modify_prim(test_prim):
+    test_prim = MODIFIED_PRIMITIVE
+
+def has_string_changed(test_value):
+    '''test if value of dictionary has changed from starting value'''
+    print("Has value changed?")
+    print(test_value!=STARTING_VALUE)
+
+def has_prim_changed(test_primitive):
+    '''test if value of primitive has changed'''
+    print("Has primitive changed?")
+    print(test_primitive!=STARTING_PRIMITIVE)
+
+'''MAIN METHOD CALLS'''
+print("Will value change when an object is passed to a method?")
+test_pass_obj_to_meth()
+print("Will value of string change when passed to a method?")
+test_pass_string_to_meth()
+print("Will value of primitive change when passed to a method?")
+test_pass_prim()
+print("Are objects assiged by reference or by value?")
+test_assign_obj()
+print("Are strings assigned by reference or by value?")
+test_assign_string()
+print("Are prims assigned by reference or by value?")
+test_assign_prim()
 ```
 #Brief Call Stack Example
 This brief example demonstrates what the call stack will look like after a number of methods
