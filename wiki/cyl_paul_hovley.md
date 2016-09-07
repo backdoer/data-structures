@@ -1,6 +1,6 @@
 ## PYTHON EXAMPLES
 ##Passing objects by reference Example
-this example demonstrates that Python passes objects by reference, meaning that if an object is 
+this example test if Python passes and assigns objects, strings, and primitives by reference or by value, meaning that if an object is 
 passed to a method, any modification done to that object inside of the method it was passed to, will
 modify both the object inside the method and outside.
 ```python
@@ -82,6 +82,31 @@ test_assign_string()
 print("Are prims assigned by reference or by value?")
 test_assign_prim()
 ```
+Result when code is run
+```
+Will value change when an object is passed to a method?
+Has value changed?
+True
+Will value of string change when passed to a method?
+Has value changed?
+False
+Will value of primitive change when passed to a method?
+Has primitive changed?
+False
+Are objects assiged by reference or by value?
+Has value changed?
+True
+Are strings assigned by reference or by value?
+Has value changed?
+False
+Are prims assigned by reference or by value?
+Has primitive changed?
+False
+```
+##Interpretation:
+Objects are passed and assigned by reference
+Strings are passed and assigned by value
+Primitives are passed and assigned by value
 #Brief Call Stack Example
 This brief example demonstrates what the call stack will look like after a number of methods
 are called in python
