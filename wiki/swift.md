@@ -102,6 +102,18 @@ These optimizations include:
   - Shorthand argument names. See example in [Derik Hasvold's code example](derik_hasvold_swift_example.txt)
   - Trailing closure syntax.
 
+## Generics
+According to the Apple documentation on Swift, generics are used all throughout the Swift language. Where did the name 'generics' come from you ask? Well generics are used to allow a function or class accept any generic type. So, to not use the word generics in the definition, let me give you an example.
+
+Lets assume you have a function that adds two Integers together. If you want to do the same thing with two Doubles or two Strings, you could:
+
+(1) create two more almost identical function that accepts two Doubles/Strings
+or (2) you could modify your first function to accept a parameter of any type. (Generics, simple)
+
+You have been using Generics and you probably didn't even know it. In Swift, Arrays and Dictionaries are also generics. When you initialize an Array you declare the type that will be stored in that Array. That is Swift utilizing the powers of Generics.
+
+If you want to learn more [Generic Examples](Swift_Generics.md) provides examples of some basic generic functions in Swift.
+
 ## The Swift Compiler
 In the process of turning source code into machine code, there are typically three stages the code goes through in order to get there. "The source code is typically turned into an intermediate form, optimized, and then transformed into machine code. Those jobs can be split up into three separate components – the frontend, the optimizer, and the backend."[^1]
 
