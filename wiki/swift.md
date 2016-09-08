@@ -116,6 +116,17 @@ source code -> Swift Abstract Syntax Tree (AST) -> Swift Intermediate Language (
 
 [Swift Compiler](Swift_Nate_Johnson.md) provides an example of simple code analyzed at each of the three stages mentioned above.
 
+
+## Optionals in Swift
+Swift supports optionals when declaring a variable. By default variables require a type to be set; however, a variable can be declared as an optional which means that you don't have to provide it with an initial value or type to get started
+
+Basically, Swift sees an optional and says, here is a value and it equals X or there isn't a value at all here
+
+Swift is designed for safety. Optionals are an example of the fact that Swift is a type safe language. Swift’s optionals provide compile-time check that would prevent some common programming errors happened at run-time. Rather than having to run your code in order to find a bug, when the program is compiled it will notify you of any existing errors rather than waitng until runtime to find it
+
+Optionals need to be tested for and if a value is always going to be present then we can force the variable to unwrap. 
+
+
 ## Automatic Reference Counting (Memory Management)
 *written by Jameson Ricks*
 
