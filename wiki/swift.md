@@ -68,6 +68,9 @@ Apple built Swift from the ground up, using a lot of smart people and a clear an
 - Tuples can be dangerous - Tuples are awesome but if done poorly they can get messey. They are a powerful tool that allows you to pull a lot more from a single function, but if used incorrectly you might actually complicate your code and hide certain parts of your Model that should be abstracted away from a single function.
 - Dynamic types - If you are going to do dynamic types, then Swift is the way to go. But despite the beauty of Swift's approach to dynamic typing it does come at a cost in speed and efficiency.
 - Garbage collection - Swift has a great garbage collector, but as in all languages that intellengently manage memory, Swift isn't going to be as efficient as an expertly developed program in C++.
+- Swift does not guarantee that the new updates will not break older code
+- Because it is new there isn't a large pool of extremely experienced developers
+
 
 ##Memory management
 Swift memory management is handled "behind the scenes."  However, there are some things that you should know.
