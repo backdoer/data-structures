@@ -68,6 +68,9 @@ Apple built Swift from the ground up, using a lot of smart people and a clear an
 - Tuples can be dangerous - Tuples are awesome but if done poorly they can get messey. They are a powerful tool that allows you to pull a lot more from a single function, but if used incorrectly you might actually complicate your code and hide certain parts of your Model that should be abstracted away from a single function.
 - Dynamic types - If you are going to do dynamic types, then Swift is the way to go. But despite the beauty of Swift's approach to dynamic typing it does come at a cost in speed and efficiency.
 - Garbage collection - Swift has a great garbage collector, but as in all languages that intellengently manage memory, Swift isn't going to be as efficient as an expertly developed program in C++.
+- Swift does not guarantee that the new updates will not break older code
+- Because it is new there isn't a large pool of extremely experienced developers
+
 
 ##Memory management
 Swift memory management is handled "behind the scenes."  However, there are some things that you should know.
@@ -124,6 +127,17 @@ For Swift, the process looks like this:
 source code -> Swift Abstract Syntax Tree (AST) -> Swift Intermediate Language (SIL) -> LLVM Intermediate Representation (LLVM IR) -> machine code
 
 [Swift Compiler](Swift_Nate_Johnson.md) provides an example of simple code analyzed at each of the three stages mentioned above.
+
+
+## Optionals in Swift
+Swift supports optionals when declaring a variable. By default variables require a type to be set; however, a variable can be declared as an optional which means that you don't have to provide it with an initial value or type to get started
+
+Basically, Swift sees an optional and says, here is a value and it equals X or there isn't a value at all here
+
+Swift is designed for safety. Optionals are an example of the fact that Swift is a type safe language. Swift’s optionals provide compile-time check that would prevent some common programming errors happened at run-time. Rather than having to run your code in order to find a bug, when the program is compiled it will notify you of any existing errors rather than waitng until runtime to find it
+
+Optionals need to be tested for and if a value is always going to be present then we can force the variable to unwrap. 
+
 
 ## Automatic Reference Counting (Memory Management)
 *written by Jameson Ricks*
