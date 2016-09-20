@@ -1,6 +1,4 @@
-# Assignment: Restaurant
-
-You are in charge of seating customers at a restaurant, and you decide to write a program to help!
+# Assignment: LinkedLists
 
 Create a new project and copy your linked list class to it.  Create the following additional classes for a total of five (5) data structure classes:
 
