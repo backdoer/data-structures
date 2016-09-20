@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 
 
-class LinkedList(object):
+class DoublyLinkedList(object):
     '''
-    A linked list implementation that holds arbitrary objects.
+    A doubly-linked list implementation that holds arbitrary objects.
     '''
     
     def __init__(self):
         '''Creates a linked list.'''
+        
         
     def debug_print(self):
         '''Prints a representation of the entire list.'''
@@ -50,6 +51,7 @@ class Node(object):
     
     def __init__(self, value):
         self.value = value
+        self.prev = None
         self.next = None
         
     def __str__(self):

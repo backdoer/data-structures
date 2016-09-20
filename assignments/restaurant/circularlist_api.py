@@ -1,16 +1,20 @@
 #!/usr/bin/env python3
 
-
-class LinkedList(object):
+class CircularLinkedList(object):
     '''
-    A linked list implementation that holds arbitrary objects.
+    A circularly-linked list implementation that holds arbitrary objects.
     '''
     
     def __init__(self):
         '''Creates a linked list.'''
         
+        
     def debug_print(self):
         '''Prints a representation of the entire list.'''
+        
+        
+    def debug_cycle(self, count):
+        '''Prints a representation of the entire cycled list up to count items'''
         
         
     def _get_node(self, index):
@@ -54,3 +58,18 @@ class Node(object):
         
     def __str__(self):
         return '<Node: {}>'.format(self.value)
+
+
+
+######################################################
+###   An iterator for the circular list
+
+class CircularLinkedListIterator(object):
+    def __init__(self, circular_list):
+        '''Starts the iterator on the given circular list.'''
+        
+    def has_next(self):
+        '''Returns whether there is another value in the list.'''
+        
+    def next(self):
+        '''Returns the next value, and increments the iterator by one value.'''
