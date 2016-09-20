@@ -8,11 +8,14 @@ class Array(object):
     
     def __init__(self, initial_size=10, chunk_size=5):
         '''Creates an array with an intial size.'''
-        
+        self.data = []
+        self.size = 0
+        for i in range(10):
+            self.data.append(None)
         
     def debug_print(self):
         '''Prints a representation of the entire allocated space, including unused spots.'''
-        
+        print(self.size + ' of ' + self.data + ' >>> ' + ', '.join(self))
         
     def _check_bounds(self, index):
         '''Ensures the index is within the bounds of the array: 0 <= index <= size.'''
