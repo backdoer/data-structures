@@ -163,7 +163,10 @@ Note: `weak` and `unowned` do not always prevent strong reference cycles from ha
 
 More Examples: [ARC Examples](Swift_ARC_Examples.md)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> b619936ade096bef97f2aca52c5934847c8af6d0
 ## Error Handling
 
 Error handling refers to the anticipation, detection and resolution of programming applications and communication errors. Error handling is a useful practice for all programmers and should be used regularly to improve the smooth flow of a program, debugging, user experiences, etc.
@@ -175,19 +178,28 @@ var err: NSError?
 let contents = NSString(contentsOfFile: filePath, encoding: NSUTF8StringEncoding, error: &err)
 
 if err != nil {
+<<<<<<< HEAD
 // uh-oh!
+=======
+    // uh-oh!
+>>>>>>> b619936ade096bef97f2aca52c5934847c8af6d0
 }  
 ```
 
 In Swift 2 however, there are four ways to handle errors. You can propagate the error from a function to the code that calls that function, handle the error using a do-catch statement, handle the error as an optional value, or assert that the error will not occur.
 
 Here is an example of error handling using [Throwing Functions](Swift_Tanner_Sawyer.md)
+<<<<<<< HEAD
     -Tanner Sawyer
 You can see examples of the other types of error [here](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/ErrorHandling.html)
 
 
 
 
+=======
+You can see examples of the other types of error [here](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/ErrorHandling.html)
+
+>>>>>>> b619936ade096bef97f2aca52c5934847c8af6d0
 ## Networking in Swift - AlamoFire
 
 Swift makes networking (making network calls, receiving data from web services, etc...) fairly simple. However, wiring up your own networking methods in Swift is akin to attempting to wire up your own networking classes and methods in Python when the pip-package `requests` exists--you just don't do it.
