@@ -1,4 +1,4 @@
-# Assignment: LinkedLists
+# Assignment: Restaurant
 
 Create a new project and copy your linked list class to it.  Create the following additional classes for a total of five (5) data structure classes:
 
