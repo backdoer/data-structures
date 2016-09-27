@@ -101,5 +101,5 @@ Song 3
 1 >>> Baggins >>> Baggins
 5 >>> Hlothran, Took, Smallburrow, Sackville, Mugwort >>> Mugwort, Sackville, Smallburrow, Took, Hlothran
 0 >>> 
-3 >>> Buzzer, Buzzer, Buzzer
+4 >>> Buzzer, Buzzer, Buzzer, Buzzer
 3 >>> Song 1, Song 2, Song 3
