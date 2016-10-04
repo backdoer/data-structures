@@ -18,8 +18,8 @@ Loop through the number files in this assignment.  For each list of numbers, do 
     1. Copy the list of numbers 1,000 times so you can sort more than once. 
     1. Save the current time in millis.
     1. In a for loop, sort each of the lists using the specific algorithm.  You should only sort each copy once (you have 1,000 copies).
-    1. Calculate the current time in millis minus the start time.  Save to some structure for later printing.  Go to the next algorithm.
-1. You should now have five results: one for each algorithm.  Determine which was the fastest, and calculate the relative increase in time of each algorithm.  The formula is: `100.0 * (algorithm time - fastest time) / fastest time`.  
+    1. Calculate the current time in millis minus the start time.  Create a `Result` object for this result.
+1. You should now have five result objects: one for each algorithm.  Determine which was the fastest, and calculate the relative increase in time of each algorithm.  The formula is: `100.0 * (algorithm time - fastest time) / fastest time`.  
 1. Sort the five results from fastest to slowest.
 1. Print the times to the console as shown in `example_output.txt`.  Please try to match this file exactly with your output.  The relative time is rounded to the nearest integer.  Note that the first 10 and last 10 numbers of each set are included in the printout.
 

@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 
 FILENAMES = [
-    [ 'list1.txt', 'int'   ],  # Interstates in USA
-    [ 'list2.txt', 'int'   ],  # 2^N
-    [ 'list3.txt', 'int'   ],  # World population since 1900
-    [ 'list4.txt', 'int'   ],  # Fibanocci
-    [ 'list5.txt', 'float' ],  # DJIA year end since 1896
-    [ 'list6.txt', 'int'   ],  # average distance of planets from sun
+    [ 'list1.txt', 'int'   ], 
+    [ 'list2.txt', 'int'   ], 
+    [ 'list3.txt', 'int'   ], 
+    [ 'list4.txt', 'int'   ], 
+    [ 'list5.txt', 'float' ], 
+    [ 'list6.txt', 'int'   ], 
 ]
 
         
