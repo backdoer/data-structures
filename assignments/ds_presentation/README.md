@@ -1,6 +1,6 @@
 # Mid-Semester Project
 
-Use an principle from 537 (array, list, circular list, etc.) in a real-world case.  Ideally, this should be a consulting or other project you are working on.  If you have previously solve a problem like this, update it with the principles you've learned in this class.  Be sure your problem does the following:
+Use a principle from 537 (array, list, circular list, etc.) in a real-world case.  Ideally, this should be a consulting or other project you are working on.  If you have previously solve a problem like this, update it with the principles you've learned in this class.  Be sure your problem does the following:
 
 * Adresses a real-world, interesting problem.  Solves it elegantly.
 * Cleverly showcases a principle from this class: stack, queues, a sorting algorithm, a searching algorithm, recursion, etc.
