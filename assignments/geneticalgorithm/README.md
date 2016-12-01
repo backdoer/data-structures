@@ -28,15 +28,15 @@ mutate(): Mutates the solution in some way.
 
 ## Run and Output
 
-Run your program at least five times with different parameters.  Change the percentages of elite, crossover, and mutations each time.  Elite items are carried forward to the next generation and are not subject to mutations.
+Run your program at least five times with different parameters.  Change the number of solutions in each generation, percentages of elite, crossover, and mutations each time.  Elite items are carried forward to the next generation and are not subject to mutations.
 
 For example, you might run the following permutations:
 
-1. 5% Elite items, 80% crossover, 5% mutations.
-1. 5% Elite items, 40% crossover, 20% mutations.
-1. 15% Elite items, 40% crossover, 10% mutations.
-1. 25% Elite items, 80% crossover, 10% mutations.
-1. 75% Elite items, 80% crossover, 5% mutations.
+1. 1,000 solutions, 5% Elite items, 80% crossover, 5% mutations.
+1. 1,000 solutions, 5% Elite items, 40% crossover, 20% mutations.
+1. 1,000 solutions, 15% Elite items, 40% crossover, 10% mutations.
+1. 1,000 solutions, 25% Elite items, 80% crossover, 10% mutations.
+1. 1,000 solutions, 75% Elite items, 80% crossover, 5% mutations.
 
 For each run, print the following to a text file called `run01.txt`, `run02.txt`, etc.:
 
@@ -63,6 +63,17 @@ Room, Start Time, End Time, Course, Section
 
 Sort the room times by room number and start time so it is easy to see that the rooms are assigned correctly.
 
+## Each Solution
+
+* Class Name
+* Class Time
+* Room
+
+* Number of students
+* Preferred Time
+*
+
+
 ## Crossovers
 
 As a class
@@ -75,15 +86,44 @@ As a class
 
 * How do we mutate without clashing with an existing room and time?
 
-## Course Fitness Function
+## Solution Fitness Function
 
-As a class
+A "solution" is one instance of course and room matching.  You need to develop a mathematical function that, given a single solution, calculates a number representing its fitness.  The result should be a single number like 100, 142, and 176.  For each generation, you'll create 1,000 solutions (or some number of solutions) and calculate the fitness value for each.  You'll crossover the top solutions to create the next generation of solutions.
+
+One of the most important principles of data mining algorithms is summarization of each case into a single number. When cases turn into single numbers, it becomes much easier to evaluate, sort, analyze, and make decisions.
+
+The following is an incomplete, example fitness function:
+
+```
+(2 * SumIndvFitness) + (10 * NumFreeRooms) - (50 * NumStudentsOutsideTNRB) + ...
+
+SumIndvFitness = The sum of the individual fitness functions (see next section).
+NumFreeRooms = The number of free rooms without any courses assigned in them (a good thing).
+NumStudentsOutsideTNRB = The number of students who are in classes assigned outside the TNRB (a bad thing).
+... = Add more items as you see fit.
+```
+
+The weights in the above function give increased or decreased weight to the items.  Do your best to anticipate what these weights should be.
+
+We'll agree to a classwide fitness function so our results are comparable.
 
 
-## Overall Fitness Function
+## Individual Course Assignment Fitness Function
 
-As a class
+While this fitness function is not really part of the genetic algorithm process, it makes calculating the solution fitness function much easier.  This number measures the fitness of a given course-room-time assignment, such as BM 331 to TNRB 408 from 1:00-2:15pm.
 
+You'll sum the output of this function for each of the 1,000 assignments in a given solution.  This sum is used as `SumIndvFitness` in the primary solution fitness function above.
+
+The following is an incomplete, example fitness function for a given assignment:
+
+```
+(10 * PreferredRoomType) + (10 * PreferredTime) - (SeatOverflow) + ...
+
+PreferredRoomType = 1 if the room type preference was met, 0 if not.
+PreferredTime = 1 if the time slot preference (morning, afternoon) was met, 0 if not.
+SeatOverflow = The number of seats in the room less the number of students in the course.
+... = Add more items as you see fit.
+```
 
 
 
