@@ -107,6 +107,7 @@ BUS M 361, TTh, 3, 251, 12:00, 1:15
 ...
 
 ```
+
 Do not include the 15 minute window at the end of course times in these output files.
 
 
@@ -135,7 +136,7 @@ The specific algorithm you use to mutate a solution is part of the final and sho
 
 ## Solution Fitness Function
 
-A "solution" is one instance of course and room matching.  For each generation, you'll create 1,000 solutions (or some number of solutions) and calculate the fitness value for each.  You'll crossover the top solutions to create the next generation of solutions.
+A "solution" is a finished schedule of courses with room assignments.  For each generation, you'll create 1,000 solutions (or some number of solutions) and calculate the fitness value for each.  You'll crossover the top solutions to create the next generation of solutions.
 
 One of the most important principles of data mining algorithms is summarization of each case into a single number. When cases turn into single numbers, it becomes much easier to evaluate, sort, analyze, and make decisions.
 
