@@ -106,6 +106,7 @@ BUS M 361, TTh, 2, 251, 10:30, 11:45
 BUS M 361, TTh, 3, 251, 12:00, 1:15
 ...
 
+```
 Do not include the 15 minute window at the end of course times in these output files.
 
 
