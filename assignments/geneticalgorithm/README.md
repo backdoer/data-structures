@@ -90,14 +90,14 @@ Crossover: 80%
 Mutations: 5%
 
 Generation, SolutionFitValue, Mean IndvFitness, Max IndvFitness, Min IndvFitness, Courses Scheduled, Courses Unscheduled
-1, 400, 20, 80, 3, 93, 0
-2, 405, 20, 82, 5, 93, 0
-3, 409, 20, 84, 3, 93, 0
-4, 426, 20, 82, 7, 93, 0
-5, 407, 20, 86, 3, 90, 3
-6, 431, 20, 87, 12, 93, 0
-7, 434, 20, 89, 17, 93, 0
-8, 435, 20, 95, 22, 93, 0
+1, 50, 20, 80, 3, 93, 0
+2, 55, 20, 82, 5, 93, 0
+3, 59, 20, 84, 3, 93, 0
+4, 66, 20, 82, 7, 93, 0
+5, 67, 20, 86, 3, 90, 3
+6, 51, 20, 87, 12, 93, 0
+7, 54, 20, 89, 17, 93, 0
+8, 65, 20, 95, 22, 93, 0
 
 Best solution:
 Course, Days, Section, Room, Start Time, End Time
